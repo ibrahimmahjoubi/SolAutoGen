@@ -1,0 +1,19 @@
+{
+  "name": "autogensolcode",
+  "version": "1.0.0",
+  "description": "simple app for auto generate solidity smart contract source code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "mongoose": "^5.3.12",
+    "passport": "*"
+  },
+  "author": "Ibrahim Mahjoubi",
+  "license": "ISC"
+}
