@@ -5,6 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
+//const codeGen = require('./CodeGenerator');
 
 const config = require('./config/database');
 const app = express();
@@ -30,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 app.use('/petriNets', periNets);
+
+//codeGen.CG();
 
 app.get('/', (req, res)=>{
   res.send('invalid endpoit');
