@@ -2,12 +2,14 @@ var fs = require('fs');
 const pn = require('./models/petrinet');
 
 // The absolute path of the new file with its name
-var filepath = "mynewfile.sol";
+var filepath = "TokenGameSmartContractSimulator.sol";
 
 var generateFunctions = function(pn){
     var functions = ''
     for (var i = 0; i < pn.transitions; i++){
-        functions = functions+"function T"+i+"() public {\n\n   }\n";
+        functions = functions+"function T"+i+"() public {\n\n"+
+            "require(verifFireCondition("+i+"));\n"+
+    "}\n";
     }
     return functions;
 }
