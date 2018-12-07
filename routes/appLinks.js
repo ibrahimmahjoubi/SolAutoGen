@@ -9,7 +9,8 @@ router.post('/matrix', (req, res, next)=>{
     post: req.body.post,
     places: req.body.places,
     transitions: req.body.transitions,
-    initialMarking: req.body.initialMarking
+    initialMarking: req.body.initialMarking,
+    tasks: req.body.tasks
   });
 Pn.addPn(newPetriNet, (err, pn)=>{
    if(err){
